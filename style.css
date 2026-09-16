@@ -1,0 +1,237 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================= BACKGROUND VIDEO ================= */
+
+.bg-video {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+/* ================= DARK OVERLAY ================= */
+
+.overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    z-index: 1;
+}
+
+/* ================= MAIN CONTENT ================= */
+
+main {
+    position: relative;
+
+    z-index: 2;
+
+    width: 90%;
+    max-width: 750px;
+
+    text-align: center;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    animation: fadeIn 1.2s ease;
+}
+
+/* ================= ZOMATO LOGO ================= */
+
+main > img {
+    width: 280px;
+    max-width: 75%;
+
+    margin-bottom: 35px;
+
+    filter: brightness(0) invert(1);
+
+    transition: transform 0.3s ease;
+}
+
+main > img:hover {
+    transform: scale(1.05);
+}
+
+/* ================= HEADING ================= */
+
+h1 {
+    font-size: 58px;
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    margin-bottom: 25px;
+
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+/* ================= DESCRIPTION ================= */
+
+main > div {
+    font-size: 20px;
+
+    line-height: 1.5;
+
+    color: #f1f1f1;
+
+    margin-bottom: 30px;
+}
+
+/* ================= APP BUTTON CONTAINER ================= */
+
+main > div:last-child {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 5px;
+}
+
+/* ================= APP BUTTONS ================= */
+
+main a {
+    display: block;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+main a:hover {
+    transform: scale(1.08);
+
+    opacity: 0.9;
+}
+
+main a img {
+    display: block;
+
+    width: 180px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+/* ================= FADE ANIMATION ================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    header {
+        min-height: 100vh;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    main > img {
+        width: 210px;
+
+        margin-bottom: 25px;
+    }
+
+    h1 {
+        font-size: 38px;
+
+        line-height: 1.15;
+
+        margin-bottom: 18px;
+    }
+
+    main > div {
+        font-size: 16px;
+
+        max-width: 350px;
+
+        margin-bottom: 25px;
+    }
+
+    main > div:last-child {
+        gap: 10px;
+    }
+
+    main a img {
+        width: 145px;
+    }
+}
+
+/* ================= SMALL PHONES ================= */
+
+@media (max-width: 380px) {
+
+    h1 {
+        font-size: 32px;
+    }
+
+    main > img {
+        width: 180px;
+    }
+
+    main a img {
+        width: 125px;
+    }
+
+}
+
