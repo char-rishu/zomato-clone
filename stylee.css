@@ -1,0 +1,610 @@
+
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f8f8;
+    color: #222;
+}
+
+
+/* ================= HERO SECTION ================= */
+
+header {
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ================= BACKGROUND VIDEO ================= */
+
+.bg-video {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+
+/* ================= DARK OVERLAY ================= */
+
+.overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    z-index: 1;
+}
+
+
+/* ================= MAIN CONTENT ================= */
+
+main {
+    position: relative;
+
+    z-index: 2;
+
+    width: 90%;
+    max-width: 800px;
+
+    text-align: center;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    animation: fadeIn 1.2s ease;
+}
+
+
+/* ================= FOODIE LOGO ================= */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+
+    cursor: pointer;
+}
+
+.logo-icon {
+    font-size: 45px;
+}
+
+.logo-text {
+    font-size:   56px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+
+/* ================= HEADING ================= */
+
+h1 {
+    font-size: 58px;
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    margin-bottom: 22px;
+
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+
+/* ================= DESCRIPTION ================= */
+
+main > p {
+    font-size: 20px;
+
+    line-height: 1.5;
+
+    color: #f1f1f1;
+
+    max-width: 600px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ================= SEARCH BOX ================= */
+
+
+/* ================= FANCY SEARCH BOX ================= */
+
+.search-box {
+    width: 100%;
+    max-width: 680px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 7px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    border-radius: 50px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+
+    transition: 0.3s ease;
+}
+
+.search-box:focus-within {
+    background: rgba(255, 255, 255, 0.22);
+
+    border-color: rgba(255, 255, 255, 0.7);
+
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.4);
+
+    transform: scale(1.02);
+}
+
+
+/* ================= SEARCH INPUT ================= */
+
+.search-box input {
+    flex: 1;
+
+    background: transparent;
+
+    border: none;
+    outline: none;
+
+    color: white;
+
+    padding: 16px 20px;
+
+    font-size: 16px;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* ================= SEARCH BUTTON ================= */
+
+.search-box button {
+    border: none;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    color: #222;
+
+    padding: 14px 28px;
+
+    border-radius: 40px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.search-box button:hover {
+    background: white;
+
+    transform: scale(1.05);
+}
+
+
+/* ================= RESTAURANT SECTION ================= */
+
+.restaurants {
+    padding: 70px 8%;
+
+    background: #ffffff;
+}
+
+.restaurants > h2 {
+    text-align: center;
+
+    font-size: 36px;
+
+    margin-bottom: 45px;
+}
+
+
+/* ================= RESTAURANT CONTAINER ================= */
+
+.restaurant-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+/* ================= RESTAURANT CARD ================= */
+
+.restaurant-card {
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ================= RESTAURANT IMAGE ================= */
+
+.restaurant-card > img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ================= RESTAURANT INFO ================= */
+
+.restaurant-info {
+    padding: 18px;
+}
+
+.restaurant-info h3 {
+    font-size: 22px;
+
+    margin-bottom: 8px;
+}
+
+.restaurant-info p {
+    color: #777;
+
+    font-size: 15px;
+
+    margin-bottom: 12px;
+}
+
+.restaurant-info span {
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+
+/* ================= FADE ANIMATION ================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+
+    .restaurant-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    header {
+        min-height: 100vh;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    .logo-text {
+        font-size: 38px;
+    }
+
+    .logo-icon {
+        font-size: 35px;
+    }
+
+    h1 {
+        font-size: 36px;
+
+        line-height: 1.15;
+
+        margin-bottom: 18px;
+    }
+
+    main > p {
+        font-size: 16px;
+
+        max-width: 350px;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* SEARCH */
+
+    .search-box {
+        flex-direction: column;
+
+        background: transparent;
+
+        gap: 10px;
+
+        box-shadow: none;
+    }
+
+    .search-box input {
+        width: 100%;
+
+        border-radius: 8px;
+
+        padding: 16px;
+    }
+
+    .search-box button {
+        width: 100%;
+
+        padding: 15px;
+
+        border-radius: 8px;
+    }
+
+
+    /* RESTAURANTS */
+
+    .restaurants {
+        padding: 50px 6%;
+    }
+
+    .restaurants > h2 {
+        font-size: 30px;
+
+        margin-bottom: 30px;
+    }
+
+    .restaurant-container {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .restaurant-card > img {
+        height: 210px;
+    }
+
+}
+
+
+/* ================= SMALL PHONES ================= */
+
+@media (max-width: 380px) {
+
+    .logo-text {
+        font-size: 32px;
+    }
+
+    .logo-icon {
+        font-size: 30px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 20px 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    z-index: 10;
+
+   
+     background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    
+}
+
+
+/* ================= NAV LOGO ================= */
+
+.nav-logo span {
+    color: white;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* ================= NAV LINKS ================= */
+
+.nav-links {
+    display: flex;
+
+    gap: 35px;
+}
+
+.nav-links a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffb3b8;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================= LOGIN BUTTON ================= */
+
+.login-btn {
+    padding: 10px 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(5px);
+
+    transition: 0.3s ease;
+}
+
+.login-btn:hover {
+    background: white;
+
+    color: #222;
+
+    transform: scale(1.05);
+}
+
+
+/* ================= MOBILE NAVBAR ================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 16px 5%;
+    }
+
+    .nav-logo span {
+        font-size: 22px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .login-btn {
+        padding: 8px 17px;
+
+        font-size: 14px;
+    }
+
+}
+
+
+
