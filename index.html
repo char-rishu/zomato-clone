@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zomato Clone</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">zomato</div>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search for restaurant or food">
+        </div>
+
+        <button class="login-btn">Log in</button>
+        <button class="signup-btn">Sign up</button>
+        <button class="cart-btn" onclick="goToCart()">
+            🛒 Cart (<span id="cartCount">0</span>)
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <h1>Discover the best food & drinks</h1>
+
+            <p>
+                Find the best restaurants, cafés and food near you.
+            </p>
+
+        </section>
+
+
+        <section class="categories">
+
+            <h2>Explore</h2>
+            <div class="category-card" data-category="pizza">
+                <div class="category-icon">🍕</div>
+                <h3>Pizza</h3>
+            </div>
+
+            <div class="category-card" data-category="burger">
+                <div class="category-icon">🍔</div>
+                <h3>Burger</h3>
+            </div>
+
+            <div class="category-card" data-category="noodles">
+                <div class="category-icon">🍜</div>
+                <h3>Noodles</h3>
+            </div>
+
+            <div class="category-card" data-category="indian">
+                <div class="category-icon">🍛</div>
+                <h3>Indian</h3>
+            </div>
+
+        </section>
+
+
+        <section class="restaurants">
+
+
+            <h2>Popular Restaurants</h2>
+
+            <div class="restaurant-container">
+
+                <div class="restaurant-card" onclick="openRestaurant('pizza')">
+
+                    <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=800&q=80"
+                        alt="Pizza" class="restaurant-image">
+
+                    <div class="restaurant-info">
+
+                        <div class="restaurant-title">
+                            <h3>Pizza Palace</h3>
+                            <span class="rating">★ 4.5</span>
+                        </div>
+
+                        <p>Pizza, Italian, Fast Food</p>
+
+                        <div class="restaurant-details">
+                            <span>₹250 for one</span>
+                            <span>•</span>
+                            <span>25 min</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="restaurant-card" onclick="openRestaurant('burger')">
+
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80"
+                        alt="Burger" class="restaurant-image">
+
+                    <div class="restaurant-info">
+
+                        <div class="restaurant-title">
+                            <h3>Burger House</h3>
+                            <span class="rating">★ 4.3</span>
+                        </div>
+
+                        <p>Burgers, Fast Food</p>
+
+                        <div class="restaurant-details">
+                            <span>₹200 for one</span>
+                            <span>•</span>
+                            <span>20 min</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="restaurant-card" onclick="openRestaurant('delhi')">
+
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80"
+                        alt="Indian Food" class="restaurant-image">
+
+                    <div class="restaurant-info">
+
+                        <div class="restaurant-title">
+                            <h3>Delhi Kitchen</h3>
+                            <span class="rating">★ 4.6</span>
+                        </div>
+
+                        <p>North Indian, Chinese</p>
+
+                        <div class="restaurant-details">
+                            <span>₹220 for one</span>
+                            <span>•</span>
+                            <span>30 min</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="restaurant-card" onclick="openRestaurant('asian')">
+
+                    <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80"
+                        alt="Noodles" class="restaurant-image">
+
+                    <div class="restaurant-info">
+
+                        <div class="restaurant-title">
+                            <h3>Asian Bowl</h3>
+                            <span class="rating">★ 4.4</span>
+                        </div>
+
+                        <p>Chinese, Asian, Noodles</p>
+
+                        <div class="restaurant-details">
+                            <span>₹180 for one</span>
+                            <span>•</span>
+                            <span>25 min</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+
+    <footer>
+
+        <p>© 2026 Zomato Clone | Made for Learning</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

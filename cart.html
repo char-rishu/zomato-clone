@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Cart</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            zomato
+        </div>
+
+        <div class="search-box">
+
+            <input type="text" placeholder="Search for restaurant or food">
+
+        </div>
+
+        <button class="login-btn">
+            Log in
+        </button>
+
+        <button class="signup-btn">
+            Sign up
+        </button>
+        <button class="cart-btn" onclick="goToCart()">
+            🛒 Cart (<span id="cartCount">0</span>)
+        </button>
+
+    </header>
+
+
+    <main class="cart-page">
+
+        <h1>
+            Your Cart
+        </h1>
+
+
+        <div id="cartContainer">
+
+            <!-- Cart items will appear here -->
+
+        </div>
+
+
+        <div class="cart-total">
+
+            <h2>
+                Total: ₹<span id="cartTotal">0</span>
+            </h2>
+
+            <button class="checkout-btn" onclick="goToCheckout()">
+                Proceed to Checkout
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
